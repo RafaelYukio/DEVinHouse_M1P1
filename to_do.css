@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Righteous&display=swap");
+
+* {
+	font-family: "Klee One", sans-serif;
+	font-size: 1.05em;
+}
+
+body {
+	background-color: rgb(100, 157, 211);
+	display: flex;
+	justify-content: center;
+}
+
+#pagina {
+	width: 1000px;
+	min-height: 900px;
+	background-color: rgb(255, 222, 173);
+	border: solid rgb(125, 125, 125) 1px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(228, 213, 172, 0.8);
+}
+
+header {
+	margin: 40px;
+	border-bottom: solid rgb(125, 125, 125) 1px;
+	text-align: center;
+}
+
+#titulo,
+#descricao {
+	font-family: "Righteous", sans-serif;
+	font-size: 2em;
+}
+
+#titulo {
+	margin-bottom: 0px;
+}
+
+#descricao {
+	margin-top: 0px;
+}
+
+#preencher {
+	margin: 30px 20px 30px 20px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+form {
+	width: 70%;
+}
+
+#atividade {
+	width: 98%;
+	height: 30px;
+	resize: vertical;
+}
+
+#afazeres {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#listaAfazeres {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+li {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: solid rgb(125, 125, 125) 1px;
+}
+
+#concluido::before {
+	width: 60px;
+	height: 60px;
+	margin-left: 15px;
+	text-align: center;
+	font-size: 1.5em;
+	content: "\270C \00A0";
+	color: rgb(180, 180, 180);
+}
+
+#pendente::before {
+	width: 60px;
+	height: 60px;
+	margin-left: 15px;
+	text-align: center;
+	font-size: 1.5em;
+	content: "\270D \00A0";
+}
+
+@-moz-document url-prefix() {
+	#concluido::before {
+		width: 60px;
+		height: 60px;
+		margin-left: 20px;
+		text-align: center;
+		font-size: 2.25em;
+		content: "\270C \00A0";
+		color: rgb(180, 180, 180);
+	}
+
+	#pendente::before {
+		width: 60px;
+		height: 60px;
+		margin-left: 20px;
+		text-align: center;
+		font-size: 2.25em;
+		content: "\270D \00A0";
+	}
+}
+
+span {
+	width: 77%;
+	word-wrap: break-word;
+}
+
+input[type="checkbox"] {
+	margin: 0px 20px 0px 0px;
+}
+
+:checked + span {
+	text-decoration: line-through;
+	animation: slide 1s forwards;
+}
+
+/* CSS 
+Button 54
+https://getcssscan.com/css-buttons-examples */
+
+button {
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	cursor: pointer;
+	border: 2px solid;
+	padding: 0.25em 0.5em;
+	box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px;
+	position: relative;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	margin: 0px 5px 0px 5px;
+	height: 40px;
+}
+
+button:active {
+	box-shadow: 0px 0px 0px 0px;
+	top: 5px;
+	left: 5px;
+}
+
+@media (min-width: 768px) {
+	button {
+		padding: 0.25em 0.75em;
+	}
+}
+
+#bLimparTexto, #bLimparNotas {
+	font-size: 50%;
+}
+
+#bLimparTexto, #bLimparNotas, #bAdicionar {
+	margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+	background-color: #fff;
+	margin: 10px;
+	width: 1.15em;
+	height: 1.15em;
+	border-radius: 0.15em;
+}
+
+@keyframes slide {
+	from {
+		color: black;
+	}
+	to {
+		color: rgb(180, 180, 180);
+	}
+}

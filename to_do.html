@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List!</title>
+    <link rel="icon" href="icon_duck.png">
+    <link rel="stylesheet" href="to_do.css">
+</head>
+
+<body>
+    <div id="pagina">
+        <header>
+            <h1 id="titulo">To Do List!</h1>
+            <p id="descricao">Organize seus afazeres!</p>
+        </header>
+        <section id="preencher">
+            <form name="preencher">
+                <label for="atividade">Nova nota:</label></br>
+                <textarea name="atividade" id="atividade" placeholder="escreva sua atividade a realizar"></textarea>
+            </form>
+            <button id="bAdicionar">+</button>
+            <button id="bLimparTexto">Limpar<br>texto</button>
+            <button id="bLimparNotas">Limpar<br>notas</button>
+        </section>
+        <section id="afazeres">
+            <ul id="listaAfazeres">
+            </ul>
+        </section>
+    </div>
+</body>
+<script src="to_do.js"></script>
+
+</html>
