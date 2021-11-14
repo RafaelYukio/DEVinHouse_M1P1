@@ -165,20 +165,51 @@ button:active {
 	}
 }
 
-#bLimparTexto, #bLimparNotas {
+#bLimparTexto,
+#bLimparNotas {
 	font-size: 50%;
 }
 
-#bLimparTexto, #bLimparNotas, #bAdicionar {
+#bLimparTexto,
+#bLimparNotas,
+#bAdicionar {
 	margin-bottom: 10px;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
 	background-color: #fff;
 	margin: 10px;
 	width: 1.15em;
 	height: 1.15em;
 	border-radius: 0.15em;
+} */
+
+input[type="checkbox"] {
+	width: 20px !important;
+	height: 20px !important;
+	margin: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	outline: 2px solid black;
+	background-color: white;
+	box-shadow: none;
+	font-size: 2em;
+}
+
+input[type="checkbox"]:checked {
+	outline: 2px solid rgb(180, 180, 180);
+	background-color: rgb(180, 180, 180);
+}
+
+input[type="checkbox"]:checked:after {
+	content: "\2714";
+	color: white;
+	position: absolute;
+	line-height: 1rem;
+	font-size: 1rem;
+	padding-left: 0.15rem;
 }
 
 @keyframes slide {
