@@ -76,7 +76,7 @@ li {
 	border-bottom: solid rgb(125, 125, 125) 1px;
 }
 
-#concluido::before {
+.concluido::before {
 	width: 60px;
 	height: 60px;
 	margin-left: 15px;
@@ -84,15 +84,17 @@ li {
 	font-size: 1.5em;
 	content: "\270C \00A0";
 	color: rgb(180, 180, 180);
+	animation: gira1 1s forwards;
 }
 
-#pendente::before {
+.pendente::before {
 	width: 60px;
 	height: 60px;
 	margin-left: 15px;
 	text-align: center;
 	font-size: 1.5em;
 	content: "\270D \00A0";
+	animation: gira2 1s forwards;
 }
 
 @-moz-document url-prefix() {
@@ -120,6 +122,11 @@ li {
 	}
 }
 
+.intermediario::before {
+	content: none;
+	display: none;
+}
+
 span {
 	width: 77%;
 	word-wrap: break-word;
@@ -131,7 +138,7 @@ input[type="checkbox"] {
 
 :checked + span {
 	text-decoration: line-through;
-	animation: slide 1s forwards;
+	animation: mostrar 2.5s forwards;
 }
 
 /* CSS 
@@ -216,11 +223,35 @@ input[type="checkbox"]:checked:after {
 	padding-left: 0.15rem;
 }
 
-@keyframes slide {
+@keyframes cor {
 	from {
 		color: black;
 	}
 	to {
 		color: rgb(180, 180, 180);
+	}
+}
+
+@keyframes gira1 {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes gira2 {
+	from{
+		transform: translateX(-30px)
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes mostrar {
+	from{
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }

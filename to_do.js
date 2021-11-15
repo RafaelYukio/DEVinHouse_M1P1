@@ -2,7 +2,9 @@ var lista = localStorage.getItem("lista");
 var listaParse = JSON.parse(lista);
 document.getElementById("listaAfazeres").innerHTML = listaParse;
 
-document.getElementById("bAdicionar").addEventListener("click", adicionaAfazeres);
+document
+	.getElementById("bAdicionar")
+	.addEventListener("click", adicionaAfazeres);
 document.getElementById("bLimparTexto").addEventListener("click", limparTexto);
 document.getElementById("bLimparNotas").addEventListener("click", limparTudo);
 
@@ -20,7 +22,7 @@ function adicionaAfazeres() {
 	var novoSpan = document.createElement("span");
 	var novoBExcluir = document.createElement("button");
 
-	novaLi.setAttribute("id", "pendente");
+	novaLi.setAttribute("class", "pendente");
 	novoCheck.setAttribute("type", "checkbox");
 	novoCheck.setAttribute("onclick", "salvarCheck(this)");
 	novoSpan.innerText = atividade;
@@ -37,8 +39,8 @@ function adicionaAfazeres() {
 
 function limparTexto() {
 	if (window.confirm("Tem certeza que deseja excluir o campo de texto?")) {
-	document.getElementById("atividade").value = "";
-}
+		document.getElementById("atividade").value = "";
+	}
 }
 
 function limparTudo() {
@@ -54,23 +56,25 @@ function limparTudo() {
 
 function limparNota(nota) {
 	var li = nota.parentNode;
-	if (window.confirm('Tem certeza que deseja excluir a nota: "' +li.getElementsByTagName("span")[0].innerText +'" ?')) {
+	if (
+		window.confirm(
+			'Tem certeza que deseja excluir a nota: "' +li.getElementsByTagName("span")[0].innerText +'" ?')
+	) {
 		li.remove();
 		salvar();
 	}
 }
 
 function salvarCheck(check) {
+
 	if (check.getAttribute("checked") == "checked") {
 		check.removeAttribute("checked");
-		check.parentNode.setAttribute("id", "pendente");
+		check.parentNode.setAttribute("class", "pendente");
 		check.parentNode.getElementsByTagName("span")[0].removeAttribute("style");
 	} else {
 		check.setAttribute("checked", "checked");
-		check.parentNode.setAttribute("id", "concluido");
-		check.parentNode
-			.getElementsByTagName("span")[0]
-			.setAttribute("style", "color: rgb(180, 180, 180)");
+		check.parentNode.setAttribute("class", "concluido");
+		check.parentNode.getElementsByTagName("span")[0].setAttribute("style", "color: rgb(180, 180, 180)");
 	}
 	salvar();
 }
