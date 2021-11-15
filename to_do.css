@@ -97,8 +97,8 @@ li {
 	animation: gira2 1s forwards;
 }
 
-@-moz-document url-prefix() {
-	#concluido::before {
+@supports (-moz-appearance:none) {
+	.concluido::before {
 		width: 40px;
 		height: 40px;
 		margin-left: 20px;
@@ -110,7 +110,7 @@ li {
 		color: rgb(180, 180, 180);
 	}
 
-	#pendente::before {
+	.pendente::before {
 		width: 40px;
 		height: 40px;
 		margin-left: 20px;
