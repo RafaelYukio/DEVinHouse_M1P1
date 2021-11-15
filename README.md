@@ -1,6 +1,6 @@
 # DEVinHouse_M1P1
 
-Projeto 1 do módulo 1 do curso DEVinHouse (SENAI)  
+Projeto 1 - 1 do curso DEVinHouse (SENAI)  
 Última atualização: 14/11/2021
 
 [to_do.html](https://rafaelyukio.github.io/DEVinHouse_M1P1/to_do.html)  
