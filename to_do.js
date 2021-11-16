@@ -2,9 +2,7 @@ var lista = localStorage.getItem("lista");
 var listaParse = JSON.parse(lista);
 document.getElementById("listaAfazeres").innerHTML = listaParse;
 
-document
-	.getElementById("bAdicionar")
-	.addEventListener("click", adicionaAfazeres);
+document.getElementById("bAdicionar").addEventListener("click", adicionaAfazeres);
 document.getElementById("bLimparTexto").addEventListener("click", limparTexto);
 document.getElementById("bLimparNotas").addEventListener("click", limparTudo);
 

@@ -21,7 +21,7 @@ Criação de uma aplicação web de lista de afazeres ("to-do list"), simulando 
 - Lista contendo notas já inseridas;
 - Cada nota na lista deve conter um _checkbox_ (para que seja marcado quando realizar a tarefa) e um botão para excluir a mesma;
 - A nota criada deve ter seu texto risco ao marcar como concluído (_line-through_);
-- A lista criada deve ser salva no _localStorage_, sendo carregada sempre que a página for aberta;
+- A lista criada deve ser salva no _localStorage_, sendo carregada sempre que a página for aberta/atualizada;
 - Codificar em html, css, js e markdown.
 </details>
 
@@ -30,15 +30,15 @@ Criação de uma aplicação web de lista de afazeres ("to-do list"), simulando 
   
 - Criar _icon_;
 - Uso correto das _tags_, dos atributos e bom posicionamento do cabeçalho;
-- Rótulo ou _placholder_ no campo de texto, indicando o conteúdo;
-- Botão para apagar conteúdo com campo de texto;
+- Rótulo ou _placeholder_ no campo de texto, indicando o conteúdo;
+- Botão para apagar conteúdo no campo de texto;
 - Uso correto das _tags_ e dos atributos para criação da lista;
 - _line-through_ na atividade marcada pelo _checkbox_;
 - Clareza (bom espaçamento) nos conteúdos da lista;
 - Mensagem de confirmação antes da exclusão da nota;
-- Salvar todas as alterações e conseguir carrega-las ao abrir a página;
+- Salvar todas as alterações e conseguir carrega-las ao abrir/atualizar a página;
 - Design agradável e intuitivo;
-- Código JS separa e bem estruturado.
+- Código JS separado e bem estruturado.
 </details>
 <br/>
 
