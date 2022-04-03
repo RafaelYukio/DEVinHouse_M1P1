@@ -7,7 +7,7 @@ Projeto 1 - Módulo 1 do curso DEVinHouse (SENAI)
 [to_do.css](https://rafaelyukio.github.io/DEVinHouse_M1P1/to_do.css)  
 [to_do.js](https://rafaelyukio.github.io/DEVinHouse_M1P1/to_do.js)
 
-## Premissas
+## Objetivos
 
 Criação de uma aplicação web de lista de afazeres ("to-do list"), simulando uma das etapas do processo seletivo de uma grande empresa de TI.
 
@@ -42,7 +42,7 @@ Criação de uma aplicação web de lista de afazeres ("to-do list"), simulando 
 </details>
 <br/>
 
-## Planejamento
+## Etapas
 
 - HTML
   - *div* para fazer o "to-do list";
